@@ -1,7 +1,7 @@
 name: flake8
 
 on:
-  push:
+  pull_request:
     paths:
       - '*.py'
     branches:
