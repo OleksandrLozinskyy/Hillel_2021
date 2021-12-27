@@ -1,0 +1,13 @@
+# Project
+
+__pycache__
+
+# sqlite
+
+*.sqlite3
+
+# Editors
+#----------
+# VSCode
+
+.vscode
