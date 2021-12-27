@@ -13,3 +13,4 @@ class PostAdmin(admin.ModelAdmin):
     inlines = [
         Like,
     ]
+    ordering = ('id',)
