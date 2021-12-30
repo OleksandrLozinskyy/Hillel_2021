@@ -1,13 +1,13 @@
 # Project
 
-__pycache__
+__pycache__/
 
 # sqlite
 
-*.sqlite3
+#*.sqlite3
 
 # Editors
 #----------
 # VSCode
 
-.vscode
+.vscode/

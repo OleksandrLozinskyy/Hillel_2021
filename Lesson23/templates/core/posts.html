@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %} Posts index{% endblock title %}
+
+{% block posts %}	
+{% include 'menu.html' %}
+{% for post, likes, dislikes in object_list %}    
+<div class="col offset-3" id="posts">
+    <article class="post">
+        <h1 class="post-title">
+        <a href="/post/{{ post.id }}" class="post_title">{{ post.title }}</a>
+        </h1>
+        <div class="post_header">
+           <div class="post_header_item">
+            <time datetime="{{ post.created_at }}" class="post_date">{{ post.created_at|date:"d-m-Y H:i" }}</time>
+            </div> 
+            <div class="post_header_item">
+                Posted by: {{ post.user_id}}
+            </div>  
+        </div>
+        <div class="content">
+            {% if post.image %}
+            <img src="{{ post.image }}" alt="{{ post.title }}" class="post_image">
+            {% endif %}
+            {{ post.content|linebreaksbr }}
+        </div>
+        <div class="post_footer">
+        <div class="post_footer_item">
+            <a href="/post/{{ post.id }}" class="read_more">Read More…</a> 
+        </div>
+        <div class="post_footer_item">
+            <span class="badge">{{ likes }}</span><a class="fas fa-thumbs-up likeblock_icon"></a>
+            <span class="badge">{{ dislikes }}</span><a class="fas fa-thumbs-down likeblock_icon"></a>
+            <span class="badge">{% block views %}0{% endblock views %}</span><a class="fas fa-eye likeblock_icon"></a>
+        </div> 
+        </div>
+    </article>
+</div>
+{% endfor %}
+{% endblock posts %}  

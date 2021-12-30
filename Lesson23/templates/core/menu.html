@@ -1,0 +1,18 @@
+{% load static %}
+
+{% block menu %}
+<div class="row">
+    <div class="col-2 px-1 bg-dark position-fixed" id="sticky-sidebar">
+        <img src="{% static 'core/images/logo.png' %}" class="site_logo">
+        <div class="nav flex-column flex-nowrap vh-100 overflow-auto text-white p-2">
+            <img src="{% static 'core/images/Users_Circle_auth.png' %}" alt="User logo" class="logo">
+            <a href="./" class="nav_link"><i class="fas fa-feather-alt menu_icon"></i>Posts</a>
+            <a href="./" class="nav_link"><i class="far fa-comments menu_icon"></i>Messages</a>
+            <a href="./" class="nav_link"><i class="fas fa-video menu_icon"></i>Videos</a>
+            <a href="./" class="nav_link"><i class="fas fa-user-friends menu_icon"></i>Friends</a>
+            <a href="./" class="nav_link"><i class="fas fa-camera menu_icon"></i>Photos</a>
+            <a href="./" class="nav_link"><i class="far fa-address-card menu_icon"></i>Profile</a>
+        </div>
+    </div>
+</div>
+{% endblock menu %}
