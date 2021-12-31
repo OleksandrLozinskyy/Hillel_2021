@@ -23,6 +23,5 @@ class PostView(DetailView):
         post = Post.objects.get(id=self.kwargs.get('pk'))
         likes = post.like_set.filter(status=True).count() 
         dislikes = post.like_set.filter(status=False).count()
-        qs = {'post': post, 'likes': likes, 'dislikes': dislikes}
-        self.queryset = qs    
+        qs = {'post': post, 'likes': likes, 'dislikes': dislikes}   
         return qs
