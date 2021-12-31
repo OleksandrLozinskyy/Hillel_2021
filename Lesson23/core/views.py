@@ -14,8 +14,15 @@ class PostListView(ListView):
 
 class PostView(DetailView):
     model = Post
-    context_object_name = 'post'
-    template_name = "../core/post.html"    
+    context_object_name = 'post_data'
+    template_name = "../core/post.html" 
+    
 
-    def get_object(self, queryset=None):
-        return Post.objects.get(id=self.kwargs.get('pk'))
+    def get_object(self, queryset=None): 
+        qs = {}
+        post = Post.objects.get(id=self.kwargs.get('pk'))
+        likes = post.like_set.filter(status=True).count() 
+        dislikes = post.like_set.filter(status=False).count()
+        qs = {'post': post, 'likes': likes, 'dislikes': dislikes}
+        self.queryset = qs    
+        return qs
