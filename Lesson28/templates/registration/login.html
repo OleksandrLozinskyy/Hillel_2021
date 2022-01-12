@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %} Login{% endblock title %}
+
+{% block content %}	   
+<div class="col offset-3" id="posts">
+    <article class="post">
+        <h1 class="post-title">
+        <a href="#" class="post_title">Login</a>
+        </h1>
+        <br>
+    <div class="form-group">
+    <form method="POST" action=".">    
+    {% csrf_token %}
+    {{ form.as_p }}
+    <br>
+    <button class="btn btn-lg btn-primary btn-block" type="submit"  value="{% url 'login' %}">Login</button> 
+    </form>
+    </div>
+    </article>
+</div>
+{% endblock content %}

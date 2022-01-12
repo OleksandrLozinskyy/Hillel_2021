@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %} Delete post ... {% endblock title %}
+
+{% block content %}	   
+<div class="col offset-3" id="posts">
+    <article class="post">
+        <h1 class="post-title">
+        <p class="post_title">Delete post : {{ post_data.title }}</p>
+        </h1>
+        <br><br>
+    <form method="POST" action=".">    
+    {% csrf_token %}
+    
+    Post "{{ post_data.title }}" will be deleted! Are you sure? 
+    <button class='btn btn-secondary'>Yes! Delete post</button> 
+    </form>
+    </article>
+</div>
+{% endblock content %}

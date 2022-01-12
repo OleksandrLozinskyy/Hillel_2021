@@ -1,0 +1,207 @@
+.posts {
+    margin-left: 22rem;
+    margin-right: 4rem;
+}
+
+.site_logo {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+#sticky-sidebar {
+    align-content: center;
+    min-width: 250px;
+}
+
+.logo {
+    width: 125px;
+    height: 125px;
+    align-self: center;
+    margin-bottom: 2em;
+   /* visibility:collapse; */
+}
+ 
+.nav_link {
+    text-decoration: none;
+    color: white;
+    font-family: "pt sans", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: 400;
+    padding-top: .25em;
+    padding-bottom: .25em;
+    margin-left: .5em;
+    letter-spacing: 2px;
+}
+
+.menu_icon {
+    color: white;
+    margin-right: 1em;
+    margin-left: 1.5em;
+}
+
+.nav_link:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.post_title {
+    line-height: 1.25;
+    font-family: "pt sans", Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: 700;
+    text-decoration: none;
+    color: #303030;
+}
+
+.post_title:hover {
+    text-decoration: none;
+    color: #303030;
+}
+
+
+
+.post_header_item {
+    display: inline-block;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    font-family: "pt sans", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: 400;
+    color: #757575;
+
+}
+
+   
+.post {
+    display: block;
+    margin-bottom: 4em;
+    margin-top: 1em;
+    max-width: 60%;
+    min-width: 20%;
+    line-height: 1.5;
+    font-family: "pt sans", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: 400;
+}
+
+.post_image {
+    display: block;
+    width: auto;
+    max-width: 710px;
+    min-width: 150px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+@media (min-width: 1002px) and (max-width: 1600px) { 
+ 
+.post {
+    max-width: 60%;
+    min-width: 20%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1001.98px) { 
+ 
+    .post {
+        max-width: 90%;
+        min-width: 20%;
+        }
+    }
+
+.post .content {
+    margin-bottom: 1em;
+}
+
+.read_more {
+    text-decoration: none;
+    color: white;
+    font-family: "pt sans", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: 400;
+}
+
+.read_more:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.post_header,
+.post_footer {
+    display: inline-block;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post_header {
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+}
+
+.post_footer .post_footer_item {
+    display: inline-block;
+    background-color: #757575;
+    border-radius: 5px;
+    margin: 0.1em;
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
+    padding-right: 0.2em;
+    padding-left: 0.2em;
+    width:fit-content;
+}
+
+.badge {
+    color: black;
+    position: relative;
+    vertical-align: center;
+    font-family: "pt sans", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: 200;
+   }
+
+.likeblock_icon,
+.likeblock_icon:hover {
+    color:white;
+    margin-right: 0.2em;
+    text-decoration: none;   
+}
+
+.form-group {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}

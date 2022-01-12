@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+{% block title %} Profile Page {% endblock title %}
+
+{% block content %}	 
+<div class="col offset-3" id="posts">
+    <article class="post">
+        <h1 class="post-title"> This is {{ user_data.user.first_name }} {{ user_data.user.last_name }} profile page </h1>
+        <hr> <br>
+        <pre>
+            Firstname: {{user_data.user.first_name}}
+            Lastname: {{user_data.user.last_name}}
+            Email: {{user_data.user.email}}
+            Sex: {{user_data.sex}}
+            Phone: {{user_data.phone_num}}
+        </pre>
+        <hr> <br>
+        <h2 class="post-title">My posts</h2>
+        <div class="row">
+        <div class="col-xs-12 float-right"><a class="btn btn-primary" href="{% url 'posts:add_post' %}">Add post</a></div><br>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+        <table>
+            {% for post in user_data.posts %}
+        <tr>
+        
+            <td> {{ post.title }}</td>
+        
+        <td><a class="btn btn-warning" href="{% url 'posts:update_post' post.pk %}">Update post</a></td>
+        <td><a class="btn btn-danger" href="{% url 'posts:delete_post' post.pk %}">Delete post</a></td>
+        </tr>
+        {% endfor %}
+        </table>    
+        </div>  
+        </div>
+    </article>
+</div>
+{% endblock content %}

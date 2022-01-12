@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %} {{ post.title }} {% endblock title %}
+
+{% block content %}	   
+<div class="col offset-3" id="posts">
+    <article class="post">
+        <h1 class="post-title">
+        <a href="{% url 'posts:preview' post_data.id %}" class="post_title">{{ post_data.title }}</a>
+        </h1>
+        <div class="post_header">
+           <div class="post_header_item">
+            <time datetime="{{ post_data.created_at }}" class="post_date">{{ post_data.created_at|date:"d-m-Y H:i" }}</time>
+            </div> 
+            <div class="post_header_item">
+                Posted by: {{ post_data.user_id}}
+            </div>  
+        </div>
+        <div class="content">
+            {% if post_data.image %}
+            <img src="{{ post_data.image }}" alt="{{ post_data.title }}" class="post_image">
+            {% endif %}
+            {{ post_data.content|linebreaksbr }}
+        </div>
+        <div class="post_footer">
+        <div class="post_footer_item">
+            <a href="{% url 'posts:list' %}" class="read_more">Go back</a> 
+        </div>
+        <div class="post_footer_item">
+            <span class="badge">{{ post_data.likes }}</span><a class="fas fa-thumbs-up likeblock_icon"></a>
+            <span class="badge">{{ post_data.dislikes }}</span><a class="fas fa-thumbs-down likeblock_icon"></a>
+            <span class="badge">{{ post_data.views }}</span><a class="fas fa-eye likeblock_icon"></a>
+        </div> 
+        </div>
+    </article>
+</div>
+{% endblock content %}  
